@@ -1,6 +1,7 @@
 <script setup>
 import Header from './components/Header.vue';
-import Search from './components/Search.vue'
+import Search from './components/Search.vue';
+import GenreFilter from './components/GenreFilter.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import Search from './components/Search.vue'
     <p>Here you will find the latest news about the movies you want to watch.</p>
   </div>
   <Search />
+  <GenreFilter/>
   
 </template>
 
