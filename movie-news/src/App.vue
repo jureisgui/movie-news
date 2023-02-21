@@ -1,7 +1,9 @@
 <script setup>
 import Header from './components/Header.vue';
 import Search from './components/Search.vue';
-import GenreFilter from './components/GenreFilter.vue'
+import GenreFilter from './components/GenreFilter.vue';
+import Footer from './components/Footer.vue'
+
 </script>
 
 <template>
@@ -12,6 +14,7 @@ import GenreFilter from './components/GenreFilter.vue'
   </div>
   <Search />
   <GenreFilter/>
+  <Footer />
   
 </template>
 

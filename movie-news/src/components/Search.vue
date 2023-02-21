@@ -2,7 +2,7 @@
     <h1>Search for specific news</h1>
     <div class="search-bar">
         <input type="text" class="search-input" placeholder="Enter movie topic">
-        <span class="search-button"><img src="../assets/images/search.png" alt=""></span>
+        <!-- <span class="search-button"><img src="../assets/images/search.png" alt=""></span> -->
     </div>
     
 </template>

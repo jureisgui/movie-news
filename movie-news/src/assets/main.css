@@ -5,7 +5,7 @@ body{
     background-color: #1D1A48;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Varela&family=Varela+Round&display=swap');
+@fontface url('https://fonts.googleapis.com/css2?family=Varela&family=Varela+Round&display=swap');
 
 h1{
     font-family: 'Varela', sans-serif;
@@ -32,6 +32,7 @@ h1{
     font-size: 14px;
     color: #F2F2F2;
   }
+
   .welcome{
     text-align: center;
     padding: 1em;
