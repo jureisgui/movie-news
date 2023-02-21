@@ -1,6 +1,6 @@
 <script setup>
-import Header from './components/Header.vue'
-// import TheWelcome from './components/TheWelcome.vue'
+import Header from './components/Header.vue';
+import Search from './components/Search.vue'
 </script>
 
 <template>
@@ -9,39 +9,11 @@ import Header from './components/Header.vue'
     <p>Welcome!</p>
     <p>Here you will find the latest news about the movies you want to watch.</p>
   </div>
+  <Search />
   
 </template>
 
-<style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Varela&family=Varela+Round&display=swap');
+<!-- <style>
 
-  h1{
-    font-family: 'Varela', sans-serif;
-    font-size: 20px;
-    color: #F2F2F2;
-  }
 
-  p{
-    font-family: 'Varela Round', sans-serif;
-    font-size: 16px;
-    color: #F2F2F2;
-  }
-
-  h2{
-    font-family: 'Varela', sans-serif;
-    font-size: 16px;
-    color: #F2F2F2;
-  }
-
-  h3{
-    font-family: 'Varela Round', sans-serif;
-    font-size: 14px;
-    color: #F2F2F2;
-  }
-
-  .welcome{
-    text-align: center;
-    padding: 1em;
-  }
-
-</style>
+</style> -->
