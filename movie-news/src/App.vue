@@ -7,6 +7,7 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
+  
   <Header />
   <div class="welcome">
     <p>Welcome!</p>
@@ -18,7 +19,24 @@ import Footer from './components/Footer.vue'
   
 </template>
 
-<!-- <style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 
+.welcome{
+    text-align: center;
+    padding: 1em;
+    padding-bottom: 0;
+  }
 
-</style> -->
+/* @fontface{
+  font-family: 'Varela';
+  src: url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+}
+
+@fontface{
+  font-family: 'Varela Round';
+  src: url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+} */
+
+</style>
