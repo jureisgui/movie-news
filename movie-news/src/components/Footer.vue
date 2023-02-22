@@ -41,7 +41,6 @@
         max-width: 110px;
         max-height: 110px;
         flex: 1;
-    }
-    
+    }    
 </style>
 
