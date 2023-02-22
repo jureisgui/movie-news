@@ -20,6 +20,8 @@
         background-color: #8C0343;
         display: flex;
         padding: 0.8em 1.5em;
+        align-items: center;
+        
     }
 
     .social-media{
@@ -36,7 +38,8 @@
     }
 
     .megaphone{
-        max-width: 120px;
+        max-width: 110px;
+        max-height: 110px;
         flex: 1;
     }
     

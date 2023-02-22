@@ -46,7 +46,6 @@
             <h3>Romance</h3>
         </div>
     </div>
-
     
 </template>
 
@@ -64,6 +63,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0.5em;
+        padding-bottom: 1em ;
     }
 
     .genre img{

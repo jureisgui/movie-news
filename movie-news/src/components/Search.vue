@@ -14,7 +14,7 @@
     justify-content: center;
     margin: 0 auto;
     display: flex;
-    position: relative;
+    /* position: relative; */
 }
 
 .search-button .search-bar{
