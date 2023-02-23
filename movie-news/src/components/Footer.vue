@@ -21,6 +21,9 @@
         display: flex;
         padding: 0.8em 1.5em;
         align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
         
     }
 

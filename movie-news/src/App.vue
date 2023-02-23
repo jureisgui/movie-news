@@ -1,6 +1,7 @@
 <script setup>
 import Header from './components/Header.vue';
-import Search from './components/Search.vue';
+// import Search from './components/Search.vue';
+import NewsArticle from './components/NewsArticle.vue'
 import GenreFilter from './components/GenreFilter.vue';
 import Footer from './components/Footer.vue'
 
@@ -13,8 +14,12 @@ import Footer from './components/Footer.vue'
     <p>Welcome!</p>
     <p>Here you will find the latest news about the movies you want to watch.</p>
   </div>
-  <Search />
+  <!-- <Search /> -->
   <GenreFilter/>
+
+  <h1>Latest News</h1>
+  <NewsArticle v-for="news in news_array" :news_article="news"  />
+
   <Footer />
   
 </template>
@@ -30,3 +35,28 @@ import Footer from './components/Footer.vue'
   }
 
 </style>
+
+<script>
+export default {
+  data(){ //data start
+    return{
+      news_array:[]
+          
+  } //data end  
+},
+
+methods:{
+  async news_fetch(){
+    const response = await fetch('https://newsapi.org/v2/everything?q=movies&apiKey=4d85dee1eea24f48abac2151c9f4196a');
+    const received_news = await response.json();
+    // console.log(received_news);
+    this.news_array = received_news.articles;
+
+  }
+}, // methods end
+
+created(){
+  this.news_fetch();
+}
+}
+</script>
