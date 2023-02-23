@@ -11,6 +11,7 @@
     </div>
   </div>
   
+  
   </template>
 
  
@@ -44,7 +45,7 @@
 </style>
 
   
-  <script setup>
+<script setup>
   
 defineProps({
     news_article:{
@@ -53,4 +54,4 @@ defineProps({
     }
     });
   
-  </script>
+</script>

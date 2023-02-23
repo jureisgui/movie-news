@@ -1,8 +1,9 @@
 <script setup>
-import Header from './components/Header.vue';
+import Header from './components/Header.vue'
 // import Search from './components/Search.vue';
 import NewsArticle from './components/NewsArticle.vue'
-import GenreFilter from './components/GenreFilter.vue';
+import GenreFilter from './components/GenreFilter.vue'
+import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 
 </script>
@@ -18,6 +19,8 @@ import Footer from './components/Footer.vue'
   <GenreFilter/>
 
   <h1>Latest News</h1>
+
+  <!-- <Main :news_articles_array='news_array' /> -->
   <NewsArticle v-for="news in news_array" :news_article="news"  />
 
   <Footer />
