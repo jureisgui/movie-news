@@ -10,17 +10,16 @@
       <p>{{ news_article.description }}</p>
     </div>
   </div>
-  
-  
+    
   </template>
 
- 
   <style scoped>
     .news-container{
     border: 1px solid #f2f2f2;
     border-radius: 6px;
     padding: 0.3em 1.5em;
     margin: 1em;
+    
     }
 
     .text-container{

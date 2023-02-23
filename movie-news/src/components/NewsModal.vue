@@ -5,7 +5,7 @@
                 <img :src="modal_news_obj.urlToImage" alt="" class="thumbnail">
             </div>
             <div class="text-container">
-                <h2>{{ modal_news_obj.title }}</h2>
+                <h2>{{ modal_prop.title }}</h2>
                 <h3>{{ modal_news_obj.author }}</h3>
                 <h3>{{ modal_news_obj.source}}</h3>
                 <h3>{{ modal_news_obj.publishedAt }}</h3>

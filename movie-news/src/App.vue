@@ -10,7 +10,7 @@ import Footer from './components/Footer.vue'
 
 <template>
 
-  <Header />
+  <Header class="infront"/>
   <div class="welcome">
     <p>Welcome!</p>
     <p>Here you will find the latest news about the movies you want to watch.</p>
@@ -37,22 +37,42 @@ import Footer from './components/Footer.vue'
     padding-bottom: 0;
   }
 
+  .infront{
+    z-index: 99;
+  }
+
 </style>
 
 <script>
 export default {
   data(){ //data start
     return{
-      news_array:[]
+      news_array:[],
+      genres:[
+        {
+          genre:"Horror",
+          img:""
+        }"Horror",
+        "Sci-fi movies",
+        "Fantasy movies",
+        "Comedy movies",
+        "Drama movies",
+        "Adventure movies",
+        "Action movies",
+        "Mystery movies",
+        "Historical movies",
+        "Animation movies",
+        "Romance movies"
+      ],
+      search_query:''
           
   } //data end  
 },
 
 methods:{
   async news_fetch(){
-    const response = await fetch('https://newsapi.org/v2/everything?q=movies&apiKey=4d85dee1eea24f48abac2151c9f4196a');
+    const response = await fetch('https://newsapi.org/v2/everything?q="'+this.search_query+' movies"'+'&apiKey=4d85dee1eea24f48abac2151c9f4196a');
     const received_news = await response.json();
-    // console.log(received_news);
     this.news_array = received_news.articles;
 
   }

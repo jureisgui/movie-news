@@ -6,9 +6,8 @@
     v-if='modal_on' />
 
     <NewsArticle
-    v-for='(news,ind) in news_articles_array'
+    v-for='news in news_articles_array'
     :news_article='news'
-    :key='ind'
     @click='modal_news_obj=news;modal_on=true' />
 
     
@@ -40,5 +39,11 @@ export default {
 import NewsModal from './NewsModal.vue';
 import NewsArticle from './NewsArticle.vue';
 
+// defineProps({
+//     modal_prop:{
+//     type: Object,
+//     required: true
+//     }
+//     });
 
 </script>
