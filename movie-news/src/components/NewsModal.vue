@@ -63,5 +63,5 @@ h2{
 </script>
 
 <script setup>
-import NewsArticle from './NewsArticle.vue';
+import NewsArticle from './NewsArticle.vue'
 </script>
