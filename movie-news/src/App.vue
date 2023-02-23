@@ -9,22 +9,22 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
+  <div>
+    <Header class="infront"/>
+    <div class="welcome">
+      <p>Welcome!</p>
+      <p>Here you will find the latest news about the movies you want to watch.</p>
+    </div>
+    <!-- <Search /> -->
+    <GenreFilter/>
 
-  <Header class="infront"/>
-  <div class="welcome">
-    <p>Welcome!</p>
-    <p>Here you will find the latest news about the movies you want to watch.</p>
+    <h1>Latest News</h1>
+
+    <Main :news_articles_array='news_array' />
+    <!-- <NewsArticle v-for="news in news_array" :news_article="news"  /> -->
+
+    <Footer />
   </div>
-  <!-- <Search /> -->
-  <GenreFilter/>
-
-  <h1>Latest News</h1>
-
-  <!-- <Main :news_articles_array='news_array' /> -->
-  <NewsArticle v-for="news in news_array" :news_article="news"  />
-
-  <Footer />
-  
 </template>
 
 <style>
@@ -49,10 +49,11 @@ export default {
     return{
       news_array:[],
       genres:[
-        {
-          genre:"Horror",
-          img:""
-        }"Horror",
+        // {
+        //   genre:"Horror",
+        //   img:""
+        // },
+        "Horror",
         "Sci-fi movies",
         "Fantasy movies",
         "Comedy movies",

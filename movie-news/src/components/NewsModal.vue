@@ -2,15 +2,15 @@
     <div class="modal-bg">
         <div class="news-container">
             <div class="thumbnail-container">
-                <img :src="modal_news_obj.urlToImage" alt="" class="thumbnail">
+                <img :src="modal_prop.urlToImage" alt="" class="thumbnail">
             </div>
             <div class="text-container">
                 <h2>{{ modal_prop.title }}</h2>
-                <h3>{{ modal_news_obj.author }}</h3>
-                <h3>{{ modal_news_obj.source}}</h3>
-                <h3>{{ modal_news_obj.publishedAt }}</h3>
-                <p>{{ modal_news_obj.content }}</p>
-                <a :href="modal_news_obj.url">Visit source</a> 
+                <h3>{{ modal_prop.author }}</h3>
+                <h3>{{ modal_prop.source}}</h3>
+                <h3>{{ modal_prop.publishedAt }}</h3>
+                <p>{{ modal_prop.content }}</p>
+                <a :href="modal_prop.url" target="_blank">Visit source</a> 
             </div>
         </div>
     </div>    
@@ -28,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .news-container{
   border: 1px solid #f2f2f2;
@@ -58,10 +59,11 @@ h2{
 }
 </style>
 
-<script>
-
-</script>
-
 <script setup>
-import NewsArticle from './NewsArticle.vue'
+defineProps({
+    modal_prop:{
+    type: Object,
+    required: true
+    }
+    });
 </script>

@@ -9,6 +9,7 @@ header{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    width: 100%;
 }
     img{
         width: 100%;

@@ -1,7 +1,7 @@
 <template>
     
     <NewsModal
-    :news_article='modal_news_obj'
+    :modal_prop='modal_news_obj'
     @click='modal_on=false'
     v-if='modal_on' />
 
@@ -39,11 +39,12 @@ export default {
 import NewsModal from './NewsModal.vue';
 import NewsArticle from './NewsArticle.vue';
 
-// defineProps({
-//     modal_prop:{
-//     type: Object,
-//     required: true
-//     }
-//     });
+defineProps({
+    news_articles_array:{
+    type: Array,
+    required: true
+    }
+    });
+
 
 </script>
