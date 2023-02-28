@@ -24,7 +24,7 @@
         position: -webkit-sticky;
         position: sticky;
         bottom: 0;
-        
+        max-height: 100px;
     }
 
     .social-media{
@@ -33,7 +33,7 @@
     }
 
     .social{
-        max-width: 30px;
+        max-width: 20px;
     }
 
     .footer-links{
@@ -44,6 +44,12 @@
         max-width: 110px;
         max-height: 110px;
         flex: 1;
-    }    
+    }  
+    
+    h3{
+        margin: 0.2em;
+    }
+    
+    
 </style>
 

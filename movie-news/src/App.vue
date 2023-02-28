@@ -51,28 +51,33 @@ import Footer from './components/Footer.vue'
   .search-section{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
   }
 
   .search-input{
     font-family: 'Varela', sans-serif;
     font-size: 16px;
-    justify-content: center;
     border-radius: 6px;
+
   }
 
   .search-button{
       text-align: center;
       /* pointer-events: none; */
       background-color: #8C0343;
-      border-radius: 50px;
-      max-width: 35px;
-      max-height: 35px;
+      border-radius: 50%;
+      max-width: 30px;
+      max-height: 30px;
+
 
   }
 
   .search-icon{
     max-width: 20px;
-    padding: 0.2em;
+    max-height: 20px;
+    padding: 0.3em;
   } 
     
 
