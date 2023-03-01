@@ -1,6 +1,7 @@
 <template>
-    <!-- <div class="genre-container">
-        <div v-for="genres in movie_genres" class="genre">
+    <!-- <h1>Filter news by genre</h1>
+    <div class="genre-container">
+        <div v-for="genres in movie_genres" class="genre" @click="search_query=genres;news_fetch();">
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
         </div>
@@ -81,6 +82,63 @@
         margin: 0;
     }  
 </style>
+
+// <script>
+// export default {
+//   data(){ //data start
+//     return{
+//       movie_genres:[
+//         {
+//           genre:"Horror",
+//           img:"./assets/images/horror.png"
+//         },
+//         {
+//           genre:"Sci-fi",
+//           img:"./assets/images/scifi.png"
+//         },
+//         {
+//           genre:"Fantasy",
+//           img:"./assets/images/fantasy.png"
+//         },
+//         {
+//           genre:"Comedy",
+//           img:"./assets/images/comedy.png"
+//         },
+//         {
+//           genre:"Drama",
+//           img:"./assets/images/drama.png"
+//         },
+//         {
+//           genre:"Adventure",
+//           img:"./assets/images/adventure.png"
+//         },
+//         {
+//           genre:"Action",
+//           img:"./assets/images/action.png"
+//         },
+//         {
+//           genre:"Mystery",
+//           img:"./assets/images/mystery.png"
+//         },
+//         {
+//           genre:"Historical",
+//           img:"./assets/images/mystery.png"
+//         },
+//         {
+//           genre:"Animation",
+//           img:"./assets/images/animation.png"
+//         },
+//         {
+//           genre:"Romance",
+//           img:"./assets/images/romance.png"
+//         }    
+//       ],
+//       search_query:''
+          
+//   } //data end  
+// }}
+// </script>
+
 
 <script setup>
 import Home from "../App.vue";

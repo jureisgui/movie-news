@@ -26,6 +26,7 @@ import Footer from './components/Footer.vue'
     <h1>Filter news by genre</h1>
 
     <div class="genre-container">
+    
         <div v-for="genres in movie_genres" class="genre" @click="search_query=genres;news_fetch();">
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
