@@ -19,8 +19,17 @@ import Footer from './components/Footer.vue'
 
     <h1>Search for specific news</h1>
     <div class="search-section">
-        <input type="text" class="search-input" placeholder="Enter movie topic">
-        <span class="search-button"><img class="search-icon" src="./assets/images/search.png" alt=""></span>
+        <input type="text" class="search-input" v-model="search_query" placeholder="Enter movie topic">
+        <span class="search-button" @click="news_fetch" :class="{noClick:!search_query.length}"><img class="search-icon" src="./assets/images/search.png" alt=""></span>
+    </div>
+
+    <h1>Filter news by genre</h1>
+
+    <div class="genre-container">
+        <div v-for="genres in movie_genres" class="genre" @click="search_query=genres;news_fetch();">
+            <img :src="genres.img" alt="">
+            <h3>{{genres.genre}}</h3>   
+        </div>
     </div>
 
     <GenreFilter/>
@@ -79,7 +88,30 @@ import Footer from './components/Footer.vue'
     max-height: 20px;
     padding: 0.3em;
   } 
-    
+  
+  .genre{
+        border: 1px solid #f2f2f2;
+        border-radius: 6px;
+        padding: 0.3em 1.5em;
+        margin: 0.5em;
+        text-align: center;
+        max-width: 70px;
+    }
+
+    .genre-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0.5em;
+        /* padding-bottom: 1em ; */
+    }
+
+    .genre img{
+        max-width: 50px;
+    }
+
+    h3{
+        margin: 0;
+    }  
 
 </style>
 
@@ -88,52 +120,52 @@ export default {
   data(){ //data start
     return{
       news_array:[],
-      // movie_genres:[
-      //   {
-      //     genre:"Horror",
-      //     img:"./assets/images/horror.png"
-      //   },
-      //   {
-      //     genre:"Sci-fi",
-      //     img:"./assets/images/scifi.png"
-      //   },
-      //   {
-      //     genre:"Fantasy",
-      //     img:"./assets/images/fantasy.png"
-      //   },
-      //   {
-      //     genre:"Comedy",
-      //     img:"./assets/images/comedy.png"
-      //   },
-      //   {
-      //     genre:"Drama",
-      //     img:"./assets/images/drama.png"
-      //   },
-      //   {
-      //     genre:"Adventure",
-      //     img:"./assets/images/adventure.png"
-      //   },
-      //   {
-      //     genre:"Action",
-      //     img:"./assets/images/action.png"
-      //   },
-      //   {
-      //     genre:"Mystery",
-      //     img:"./assets/images/mystery.png"
-      //   },
-      //   {
-      //     genre:"Historical",
-      //     img:"./assets/images/mystery.png"
-      //   },
-      //   {
-      //     genre:"Animation",
-      //     img:"./assets/images/animation.png"
-      //   },
-      //   {
-      //     genre:"Romance",
-      //     img:"./assets/images/romance.png"
-      //   }    
-      // ],
+      movie_genres:[
+        {
+          genre:"Horror",
+          img:"./assets/images/horror.png"
+        },
+        {
+          genre:"Sci-fi",
+          img:"./assets/images/scifi.png"
+        },
+        {
+          genre:"Fantasy",
+          img:"./assets/images/fantasy.png"
+        },
+        {
+          genre:"Comedy",
+          img:"./assets/images/comedy.png"
+        },
+        {
+          genre:"Drama",
+          img:"./assets/images/drama.png"
+        },
+        {
+          genre:"Adventure",
+          img:"./assets/images/adventure.png"
+        },
+        {
+          genre:"Action",
+          img:"./assets/images/action.png"
+        },
+        {
+          genre:"Mystery",
+          img:"./assets/images/mystery.png"
+        },
+        {
+          genre:"Historical",
+          img:"./assets/images/mystery.png"
+        },
+        {
+          genre:"Animation",
+          img:"./assets/images/animation.png"
+        },
+        {
+          genre:"Romance",
+          img:"./assets/images/romance.png"
+        }    
+      ],
       search_query:''
           
   } //data end  

@@ -1,6 +1,13 @@
 <template>
-    <h1>Filter news by genre</h1>
-    <div class="genre-container">
+    <!-- <div class="genre-container">
+        <div v-for="genres in movie_genres" class="genre">
+            <img :src="genres.img" alt="">
+            <h3>{{genres.genre}}</h3>   
+        </div>
+    </div> -->
+
+
+    <!-- <div class="genre-container">
         <div class="genre horror">
             <img src="../assets/images/horror.png" alt="">
             <h3>Horror</h3>
@@ -45,7 +52,7 @@
             <img src="../assets/images/romance.png" alt="">
             <h3>Romance</h3>
         </div>
-    </div>
+    </div> -->
     
 </template>
 
@@ -74,5 +81,12 @@
         margin: 0;
     }  
 </style>
+
+<script setup>
+import Home from "../App.vue";
+
+
+
+</script>
 
 
