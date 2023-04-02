@@ -28,7 +28,7 @@ import Footer from './components/Footer.vue'
     <div class="genre-container">
     
         <div v-for="genres in movie_genres" class="genre" @click="search_query=genres;news_fetch();">
-            <img src="genres.img" alt="">
+            <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
         </div>
     </div> -->
@@ -70,7 +70,6 @@ import Footer from './components/Footer.vue'
     font-family: 'Varela', sans-serif;
     font-size: 16px;
     border-radius: 6px;
-
   }
 
   .search-button{
@@ -80,8 +79,6 @@ import Footer from './components/Footer.vue'
       border-radius: 50%;
       max-width: 30px;
       max-height: 30px;
-
-
   }
 
   .search-icon{
@@ -124,47 +121,47 @@ export default {
       movie_genres:[
         {
           genre:"Horror",
-          img:"./assets/images/horror.png"
+          img:"https://i.ibb.co/FqSHDB4/horror.png"
         },
         {
           genre:"Sci-fi",
-          img:"./assets/images/scifi.png"
+          img:"https://i.ibb.co/hMFTCrG/scifi.png"
         },
         {
           genre:"Fantasy",
-          img:"./assets/images/fantasy.png"
+          img:"https://i.ibb.co/Vt2Dssp/fantasy.png"
         },
         {
           genre:"Comedy",
-          img:"./assets/images/comedy.png"
+          img:"https://i.ibb.co/pXWBm61/comedy.png"
         },
         {
           genre:"Drama",
-          img:"./assets/images/drama.png"
+          img:"https://i.ibb.co/CKD5G2R/drama.png"
         },
         {
           genre:"Adventure",
-          img:"./assets/images/adventure.png"
+          img:"https://i.ibb.co/vkW6dTh/adventure.png"
         },
         {
           genre:"Action",
-          img:"./assets/images/action.png"
+          img:"https://i.ibb.co/0Bc9YCQ/action.png"
         },
         {
           genre:"Mystery",
-          img:"./assets/images/mystery.png"
+          img:"https://i.ibb.co/3hRdf2D/mystery.png"
         },
         {
           genre:"Historical",
-          img:"./assets/images/mystery.png"
+          img:"https://i.ibb.co/dPWs3ds/historical.png"
         },
         {
           genre:"Animation",
-          img:"./assets/images/animation.png"
+          img:"https://i.ibb.co/6t2tM8X/animation.png"
         },
         {
           genre:"Romance",
-          img:"./assets/images/romance.png"
+          img:"https://i.ibb.co/p4943HT/romance.png"
         }    
       ],
       search_query:''
