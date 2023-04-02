@@ -8,7 +8,7 @@
     </div> -->
 
 
-    <!-- <div class="genre-container">
+    <div class="genre-container">
         <div class="genre horror">
             <img src="../assets/images/horror.png" alt="">
             <h3>Horror</h3>
@@ -53,7 +53,7 @@
             <img src="../assets/images/romance.png" alt="">
             <h3>Romance</h3>
         </div>
-    </div> -->
+    </div>
     
 </template>
 
