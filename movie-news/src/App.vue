@@ -25,8 +25,7 @@ import Footer from './components/Footer.vue'
 
     <h1>Filter news by genre</h1>
 
-    <div class="genre-container">
-    
+    <div class="genre-container">    
         <div v-for="genres in movie_genres" class="genre" @click="search_query=genres.genre;news_fetch();">
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
@@ -51,11 +50,7 @@ import Footer from './components/Footer.vue'
     padding-bottom: 0;
   }
 
-  /* .infront{
-    z-index: 99;
-  } */
-
-  .search-section{
+.search-section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,50 +58,51 @@ import Footer from './components/Footer.vue'
     
   }
 
-  .search-input{
+.search-input{
     font-family: 'Varela', sans-serif;
     font-size: 16px;
     border-radius: 6px;
   }
 
-  .search-button{
-      text-align: center;
-      /* pointer-events: none; */
-      background-color: #8C0343;
-      border-radius: 50%;
-      max-width: 30px;
-      max-height: 30px;
+.search-button{
+    text-align: center;
+    /* pointer-events: none; */
+    background-color: #8C0343;
+    border-radius: 50%;
+    max-width: 30px;
+    max-height: 30px;
   }
 
-  .search-icon{
+.search-icon{
     max-width: 20px;
     max-height: 20px;
     padding: 0.3em;
   } 
   
-  .genre{
-        border: 1px solid #f2f2f2;
-        border-radius: 6px;
-        padding: 0.3em 1.5em;
-        margin: 0.5em;
-        text-align: center;
-        max-width: 70px;
-    }
+.genre{
+    border: 1px solid #f2f2f2;
+    border-radius: 6px;
+    padding: 0.3em 1em;
+    margin: 0.5em;
+    text-align: center;
+    max-width: 70px;
+  }
 
-    .genre-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 0.5em;
-        /* padding-bottom: 1em ; */
-    }
+.genre-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 400px;
+    margin: 0.5em auto;
+    text-align: center;
+  }
+    
+.genre img{
+    max-width: 50px;
+  }
 
-    .genre img{
-        max-width: 50px;
-    }
-
-    h3{
-        margin: 0;
-    }  
+h3{
+    margin: 0;
+}  
 
 </style>
 
