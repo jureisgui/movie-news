@@ -23,7 +23,7 @@ import Footer from './components/Footer.vue'
         <span class="search-button" @click="news_fetch" :class="{noClick:!search_query.length}"><img class="search-icon" src="./assets/images/search.png" alt=""></span>
     </div>
 
-    <!-- <h1>Filter news by genre</h1>
+    <h1>Filter news by genre</h1>
 
     <div class="genre-container">
     
@@ -31,9 +31,9 @@ import Footer from './components/Footer.vue'
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
         </div>
-    </div> -->
+    </div>
 
-    <GenreFilter/>
+    <!-- <GenreFilter/> -->
 
     <h1>Latest News</h1>
 
@@ -54,9 +54,9 @@ import Footer from './components/Footer.vue'
     padding-bottom: 0;
   }
 
-  .infront{
+  /* .infront{
     z-index: 99;
-  }
+  } */
 
   .search-section{
     display: flex;
