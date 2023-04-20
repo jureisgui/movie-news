@@ -6,13 +6,15 @@
 
 <style scoped>
 header{
-    /* position: -webkit-sticky;
-    position: sticky; */
-    top: 0;
-    width: 100%;
+    top: 0;    
+    max-height: 400px;
+    
 }
     img{
         width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
     }
 
 </style>
