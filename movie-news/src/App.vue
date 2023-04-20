@@ -27,19 +27,16 @@ import Footer from './components/Footer.vue'
 
     <div class="genre-container">
     
-        <div v-for="genres in movie_genres" class="genre" @click="search_query=genres;news_fetch();">
+        <div v-for="genres in movie_genres" class="genre" @click="search_query=genres.genre;news_fetch();">
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
         </div>
     </div>
 
-    <!-- <GenreFilter/> -->
-
     <h1>Latest News</h1>
 
     <Main :news_articles_array='news_array' />
-    <!-- <NewsArticle v-for="news in news_array" :news_article="news"  /> -->
-
+    
     <Footer />
   </div>
 </template>
@@ -169,17 +166,17 @@ export default {
   } //data end  
 },
 
-methods:{
-  async news_fetch(){
-    const response = await fetch('https://newsapi.org/v2/everything?q="'+this.search_query+' movies"'+'&apiKey=4d85dee1eea24f48abac2151c9f4196a');
-    const received_news = await response.json();
-    this.news_array = received_news.articles;
+  methods:{
+    async news_fetch(){
+      const response = await fetch('https://newsapi.org/v2/everything?q="'+this.search_query+' movies"'+'&apiKey=4d85dee1eea24f48abac2151c9f4196a');
+      const received_news = await response.json();
+      this.news_array = received_news.articles;
 
+    }
+  }, // methods end
+
+  created(){
+    this.news_fetch();
   }
-}, // methods end
-
-created(){
-  this.news_fetch();
-}
 }
 </script>
