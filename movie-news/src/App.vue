@@ -1,8 +1,5 @@
 <script setup>
 import Header from './components/Header.vue'
-// import Search from './components/Search.vue';
-import NewsArticle from './components/NewsArticle.vue'
-import GenreFilter from './components/GenreFilter.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 
@@ -10,7 +7,7 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div>
-    <Header class="infront"/>
+    <Header />
 
     <div class="welcome">
       <p>Welcome!</p>
@@ -26,14 +23,13 @@ import Footer from './components/Footer.vue'
     <h1>Filter news by genre</h1>
 
     <div class="genre-container">    
-        <div v-for="genres in movie_genres" class="genre" @click="search_query=genres.genre;news_fetch();">
+        <div class="genre" v-for="genres in movie_genres" @click="search_query=genres.genre;news_fetch();">
             <img :src="genres.img" alt="">
             <h3>{{genres.genre}}</h3>   
         </div>
     </div>
 
     <h1>Latest News</h1>
-
     <Main :news_articles_array='news_array' />
     
     <Footer />
@@ -54,8 +50,7 @@ import Footer from './components/Footer.vue'
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    
+    gap: 20px;       
   }
 
 .search-input{
@@ -66,11 +61,15 @@ import Footer from './components/Footer.vue'
 
 .search-button{
     text-align: center;
-    /* pointer-events: none; */
     background-color: #8C0343;
     border-radius: 50%;
     max-width: 30px;
     max-height: 30px;
+    cursor: pointer;
+  }
+
+.search-button:hover{
+    transform: scale(1.1);
   }
 
 .search-icon{
@@ -86,6 +85,11 @@ import Footer from './components/Footer.vue'
     margin: 0.5em;
     text-align: center;
     max-width: 70px;
+    cursor: pointer;
+  }
+
+  .genre:hover{
+    transform: scale(1.1);
   }
 
 .genre-container{
@@ -157,10 +161,9 @@ export default {
           img:"https://i.ibb.co/p4943HT/romance.png"
         }    
       ],
-      search_query:''
-          
-  } //data end  
-},
+      search_query:'',          
+  }   
+}, //data end
 
   methods:{
     async news_fetch(){

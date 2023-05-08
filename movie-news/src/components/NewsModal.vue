@@ -19,17 +19,18 @@
 <style scoped>
 
 .modal-bg{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
+
 .news-container{
   border: 1px solid #f2f2f2;
   border-radius: 6px;
@@ -37,10 +38,6 @@
   margin: 1em;
   background-color: #1D1A48;
 }
-
-/* .text-container{
-  text-align: center; 
-} */
 
 .thumbnail-container{
   text-align: center;
@@ -60,10 +57,10 @@ h2{
 </style>
 
 <script setup>
-defineProps({
-    modal_prop:{
-    type: Object,
-    required: true
-    }
-    });
+  defineProps({
+      modal_prop:{
+      type: Object,
+      required: true
+      }
+      });
 </script>

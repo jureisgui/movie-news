@@ -14,24 +14,25 @@
   </template>
 
   <style scoped>
-    .news-container{
+  .news-container{
     border: 1px solid #f2f2f2;
     border-radius: 6px;
     padding: 0.3em 1.5em;
     margin: 1em;
+    cursor: pointer;
     
     }
 
-    .text-container{
+  .text-container{
     text-align: center; 
     }
 
-    .thumbnail-container{
+  .thumbnail-container{
     text-align: center;
     padding-top: 1em;
     }
 
-    .thumbnail{
+  .thumbnail{
     width: 300px;
     object-fit: cover;
     border-radius: 6px;
@@ -44,13 +45,11 @@
 </style>
 
   
-<script setup>
-  
-defineProps({
-    news_article:{
-    type: Object,
-    required: true
-    }
-    });
-  
+<script setup>  
+  defineProps({
+      news_article:{
+      type: Object,
+      required: true
+      }
+      });  
 </script>
