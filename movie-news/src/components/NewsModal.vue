@@ -1,7 +1,7 @@
 <template>
     <div class="modal-bg">
         <div class="news-container">
-          <button class="close-button" @click="closeModal">x</button>
+          <span class="close-button" @click="closeModal">x</span>
           <div class="thumbnail-container">
               <img :src="modal_prop.urlToImage" alt="" class="thumbnail">
           </div>
@@ -34,10 +34,11 @@
 .news-container{
   border: 1px solid #f2f2f2;
   border-radius: 6px;
-  padding: 0.3em 1.5em;
+  padding: 1.5em;
   margin: 1em;
   background-color: #1D1A48;
   position: relative;
+  max-width: 900px;
 }
 
 .thumbnail-container{
@@ -58,17 +59,24 @@ h2{
 
 a{
   color:#f2f2f2;
+  font-family: 'Varela', sans-serif;
 }
 
 .close-button {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
-  border: none;
+  top: 0.4rem;
+  right: 0.3rem;
+  background-color: #f2f2f238;
+  border-radius: 50%;
+  font-family: 'Varela', sans-serif;
   font-size: 1.5rem;
-  color: #999;
+  width: 30px;
+  height: 30px;
+  color: #f2f2f2;
   cursor: pointer;
+  padding: 0.1em;
+  text-align: center;
+  align-items: center;
 }
 </style>
 
@@ -76,8 +84,6 @@ a{
 import { ref } from 'vue';
 
 const closeModal = () => {
-  // Emit an event or perform necessary actions to close the modal
-  // For example, you can use a ref to control the modal's visibility
   const modalVisible = ref(true);
   modalVisible.value = false;
 };
