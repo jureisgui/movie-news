@@ -6,8 +6,3 @@ View Article List
 The application can be extended with the following use cases:
 Search Articles by Search Term
 Filter Articles by Category
-
-Instructions
-Insite the terminal type:
-cd movies-news
-npm run dev
