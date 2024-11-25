@@ -210,10 +210,11 @@ export default {
 
   methods:{
     async news_fetch(){
+    const NEWS_API_KEY = import.meta.env.NEWS_API_KEY;
       const searchWords = this.search_query.trim().split(' ');
       const query = searchWords.map((word) => `"${word}"`).join(' ');
       const response = await fetch(
-        `https://newsapi.org/v2/everything?q=${query} movies&apiKey=4d85dee1eea24f48abac2151c9f4196a`
+        `https://newsapi.org/v2/everything?q=${query} movies&apiKey=${NEWS_API_KEY}`
       );
       const received_news = await response.json();
       this.news_array = received_news.articles;
